@@ -19,6 +19,10 @@
 
             return;
         }
+        
+        public static function forceDelFolder ($dir) {
+            shell_exec("rmdir /Q /S ".$dir);   
+        }
 
         public static function rrmdir($dir) {
             if (is_dir($dir)) {
