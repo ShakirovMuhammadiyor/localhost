@@ -1,8 +1,8 @@
 # Transcend the constraints of time 
 
-### This repo was designed to work with PHP-staff, but you may do the same with any other language as well.
+**Let's get right to the topic (you might have already understood what this repository is all about) 💡**
 
-**So, let's get right to the topic (you might have already understood what this repository is all about) 💡**
+_This repo was designed to work with PHP-staff, but you may do the same with any other language as well._
 
 _Here's the basic representation of the whole process._
 
