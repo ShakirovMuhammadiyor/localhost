@@ -1,4 +1,4 @@
-# Transcend the constraints of time 
+# Transcend the constraints of time  
 
 **Let's get right to the topic (you might have already understood what this repository is all about) 💡**
 
