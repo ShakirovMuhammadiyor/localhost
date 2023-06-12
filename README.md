@@ -65,4 +65,3 @@ _A few comments about the code:_ :card_file_box:
 2. It's been decided to indicate the paper numbers in letters (q, w, e...) to make the process even more secure
 3. mainRun() comes from main.php, and basically handles all those paper-specific operations (package-installation, databases, migrations, etc..)
 4. At the end, the file deletes itself.
-
