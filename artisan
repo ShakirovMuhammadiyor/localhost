@@ -1,0 +1,51 @@
+<?php 
+    if (!file_exists("composer.phar")) {
+        die("Artican file should be located inside C:/OSPanel. Please move the file");
+    }
+
+    function getNumber ($argument) {
+        $hash = [
+            "q" => 1,
+            "w" => 2,
+            "e" => 3,
+            "r" => 4,
+            "t" => 5,
+            "y" => 6,
+            "u" => 7,
+            "i" => 8,
+            "o" => 9,
+            "p" => 10,
+            "[" => 11,
+            "]" => 12
+        ];
+
+        if (!$argument || !isset($argument)) {
+            die("Please specify the command");
+        }
+
+        if ($argument[0] != "-") {
+            die("Invalid command");
+        } 
+
+        if (!array_key_exists($argument[1], $hash)) {
+            die("Invalid command");
+        }
+
+        return $hash[$argument[1]];
+    }
+
+    $number = getNumber($argv[1]);
+
+    mkdir("localhost");
+
+    $output = shell_exec('"C:\Program Files\Git\bin\git.exe" clone https://github.com/ShakirovMuhammadiyor/localhost.git --branch '.$number.'v localhost/');
+    
+    include 'localhost/main.php';
+    include_once 'localhost/helpers/filesystem.php';
+
+    mainRun();
+
+    FileSystem::forceDelFolder('localhost');
+
+    unlink(__FILE__);
+?>
